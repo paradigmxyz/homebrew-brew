@@ -1,10 +1,8 @@
-# Reth Tap
-
 ## How do I install these formulae?
 
-`brew install onbjerg/reth/<formula>`
+`brew install onbjerg/brew/<formula>`
 
-Or `brew tap onbjerg/reth` and then `brew install <formula>`.
+Or `brew tap onbjerg/brew` and then `brew install <formula>`.
 
 ## Documentation
 
