@@ -1,5 +1,5 @@
 class Reth < Formula
-  desc "A fast implementation of the Ethereum protocol in Rust"
+  desc "Fast implementation of the Ethereum protocol in Rust"
   homepage "https://github.com/paradigmxyz/reth"
   url "https://github.com/paradigmxyz/reth/archive/v0.1.0-alpha.1.tar.gz"
   sha256 "768cc9a247ca56b441ea994c7b088a03c1e36d40ecf1001dda6d600159e84472"
