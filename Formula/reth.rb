@@ -12,10 +12,10 @@ class Reth < Formula
   end
 
   bottle do
-    rebuild 2
     root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-0.1.0-alpha.1"
-    sha256 cellar: :any_skip_relocation, ventura:      "7913b51b9139cabe00e07ff0a19320fae73829dc5a02e10da7f6581be56a4e46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d67d5adb7a868f3524c221654eceb69161ae685f4e9423559f9eb472d9234af4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura:      "f7014721b4e081a9eca252c54f18b27888364fe4f9a231a37cfb256265bbaf19"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "91e7a816db2fc8303e181983afc3599da0e0d98416381bba9aa661064a19227b"
   end
 
   depends_on "llvm" => :build
