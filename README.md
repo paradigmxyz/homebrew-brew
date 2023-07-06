@@ -1,8 +1,8 @@
 ## How do I install these formulae?
 
-`brew install onbjerg/brew/<formula>`
+`brew install paradigmxyz/brew/<formula>`
 
-Or `brew tap onbjerg/brew` and then `brew install <formula>`.
+Or `brew tap paradigmxyz/brew` and then `brew install <formula>`.
 
 ## Documentation
 
