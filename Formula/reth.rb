@@ -11,6 +11,12 @@ class Reth < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/onbjerg/homebrew-reth/releases/download/reth-0.1.0-alpha.1"
+    sha256 cellar: :any_skip_relocation, ventura:      "7913b51b9139cabe00e07ff0a19320fae73829dc5a02e10da7f6581be56a4e46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d67d5adb7a868f3524c221654eceb69161ae685f4e9423559f9eb472d9234af4"
+  end
+
   depends_on "llvm" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
