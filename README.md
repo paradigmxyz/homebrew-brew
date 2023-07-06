@@ -1,4 +1,4 @@
-# Onbjerg Reth
+# Reth Tap
 
 ## How do I install these formulae?
 
