@@ -12,6 +12,12 @@ class Foundry < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/foundry-1.0.0"
+    sha256 cellar: :any,                 ventura:      "036502dc9df4bab46d5901a2048af347dc1409f0aa93221751a68fbe51b521ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "dce2fbcab398e61b45554950dfe178d866e0500e1561162a81de5cd849912c6a"
+  end
+
   depends_on "rust" => :build
   depends_on "libusb"
 
