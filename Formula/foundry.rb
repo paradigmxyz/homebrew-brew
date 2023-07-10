@@ -15,7 +15,9 @@ class Foundry < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "foundry-cli", "anvil", "chisel", *std_cargo_args
+    system "cargo", "install", "--bins", *std_cargo_args(path: "./cli")
+    system "cargo", "install", *std_cargo_args(path: "./anvil")
+    system "cargo", "install", *std_cargo_args(path: "./chisel")
   end
 
   test do
