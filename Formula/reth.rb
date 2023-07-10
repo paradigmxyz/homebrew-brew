@@ -4,7 +4,6 @@ class Reth < Formula
   url "https://github.com/paradigmxyz/reth.git",
     tag: "v0.1.0-alpha.3",
     revision: "31af4d55bc5ad5fe976ddf4aa50ce441699e5f9c"
-  sha256 "7d8ca049db6042dcab4338386d9334556da188ca81408fd86c2d5ffc93b07617"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/paradigmxyz/reth.git", branch: "main"
 
