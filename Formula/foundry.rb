@@ -13,6 +13,7 @@ class Foundry < Formula
   end
 
   depends_on "rust" => :build
+  depends_on "libusb"
 
   def install
     system "cargo", "install", "--bins", *std_cargo_args(path: "./cli")
