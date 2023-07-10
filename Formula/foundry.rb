@@ -2,8 +2,8 @@ class Foundry < Formula
   desc "A blazing fast, portable and modular toolkit for Ethereum written in Rust"
   homepage "https://github.com/foundry-rs/foundry"
   url "https://github.com/foundry-rs/foundry.git",
-    tag:        "v1.0.0",
-    revision:   "afdbbc05cc479468b15a6f42b577b62e0fd4895e"
+    tag:      "v1.0.0",
+    revision: "afdbbc05cc479468b15a6f42b577b62e0fd4895e"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/foundry-rs/foundry.git", branch: "main"
 
