@@ -9,8 +9,8 @@ class Flood < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/paradigmxyz/flood.git", branch: "main"
 
-  depends_on "vegeta"
   depends_on "python@3.11"
+  depends_on "vegeta"
 
   def install
     virtualenv_install_with_resources
