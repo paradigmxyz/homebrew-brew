@@ -1,5 +1,5 @@
 class Foundry < Formula
-  desc "A blazing fast, portable and modular toolkit for Ethereum written in Rust"
+  desc "Blazing fast, portable and modular toolkit for Ethereum written in Rust"
   homepage "https://github.com/foundry-rs/foundry"
   url "https://github.com/foundry-rs/foundry.git",
     tag:      "v1.0.0",
