@@ -20,8 +20,8 @@ class Reth < Formula
 
   depends_on "llvm" => :build
   depends_on "pkg-config" => :build
-  depends_on "rust" => :build
   depends_on "libunwind" => :build
+  depends_on "rust" => :build
 
   def install
     cd "bin/reth" do
