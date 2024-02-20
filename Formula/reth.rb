@@ -18,9 +18,9 @@ class Reth < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "c4b3b02f1d3b3371d2b846d8321f2fd406f062d56a858bd51d4a7d97e5d0bf71"
   end
 
+  depends_on "libunwind" => :build
   depends_on "llvm" => :build
   depends_on "pkg-config" => :build
-  depends_on "libunwind" => :build
   depends_on "rust" => :build
 
   def install
