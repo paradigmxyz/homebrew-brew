@@ -17,7 +17,7 @@ class Reth < Formula
 
   def install
     cd "bin/reth" do
-      if Hardware::CPU.intel? or OS.mac?
+      if Hardware::CPU.intel? || OS.mac?
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
       else
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
