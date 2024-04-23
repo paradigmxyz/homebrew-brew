@@ -12,7 +12,6 @@ class Reth < Formula
     strategy :github_latest
   end
 
-  depends_on "llvm" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
 
