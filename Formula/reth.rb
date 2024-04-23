@@ -16,9 +16,17 @@ class Reth < Formula
   depends_on "rust" => :build
 
   def install
+    features = []
+    if Hardware::CPU.intel? || OS.mac?
+      features.push("jemalloc")
+    end
+    unless Hardware::CPU.arm? && OS.linux?
+      features.push("asm-keccak")
+    end
+
     cd "bin/reth" do
-      if Hardware::CPU.intel? || OS.mac?
-        system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
+      if features.any?
+        system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", *features, *std_cargo_args
       else
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
       end
