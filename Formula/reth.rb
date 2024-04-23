@@ -18,7 +18,9 @@ class Reth < Formula
   def install
     features = []
     features.push("jemalloc") if Hardware::CPU.intel? || OS.mac?
-    features.push("asm-keccak") if !(Hardware::CPU.arm? && OS.linux?)
+
+    is_arm_linux = Hardware::CPU.arm? && OS.linux?
+    features.push("asm-keccak") unless is_arm_linux
 
     cd "bin/reth" do
       if features.any?
