@@ -24,7 +24,8 @@ class Reth < Formula
 
     cd "bin/reth" do
       if features.any?
-        system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", *features, *std_cargo_args
+        system "cargo", "install", "--bin", "reth", "--profile", "maxperf",
+          "--features", features.join(" "), *std_cargo_args
       else
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
       end
