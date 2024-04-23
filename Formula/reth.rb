@@ -16,12 +16,10 @@ class Reth < Formula
   depends_on "rust" => :build
 
   def install
-    if Hardware::CPU.intel?
-      cd "bin/reth" do
+    cd "bin/reth" do
+      if Hardware::CPU.intel? or OS.mac?
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
-      end
-    else
-      cd "bin/reth" do
+      else
         system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
       end
     end
