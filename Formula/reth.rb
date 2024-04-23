@@ -12,11 +12,6 @@ class Reth < Formula
     strategy :github_latest
   end
 
-  bottle do
-    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-0.2.0-beta.6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7b9c2d91b6ae69b5deace9d2678cec9e843bac772080bdc8191b9a49919d1111"
-  end
-
   depends_on "llvm" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
