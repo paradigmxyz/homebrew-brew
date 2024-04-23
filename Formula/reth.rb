@@ -18,13 +18,13 @@ class Reth < Formula
 
   def install
     if Hardware::CPU.intel?
-        cd "bin/reth" do
-            system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
-        end
+      cd "bin/reth" do
+        system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
+      end
     else
-        cd "bin/reth" do
-            system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
-        end
+      cd "bin/reth" do
+        system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
+      end
     end
   end
 
