@@ -17,8 +17,14 @@ class Reth < Formula
   depends_on "rust" => :build
 
   def install
-    cd "bin/reth" do
-      system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
+    if Hardware::CPU.intel?
+        cd "bin/reth" do
+            system "cargo", "install", "--bin", "reth", "--profile", "maxperf", "--features", "jemalloc", *std_cargo_args
+        end
+    else
+        cd "bin/reth" do
+            system "cargo", "install", "--bin", "reth", "--profile", "maxperf", *std_cargo_args
+        end
     end
   end
 
