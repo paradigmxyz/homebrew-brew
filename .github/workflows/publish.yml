@@ -1,4 +1,6 @@
 name: brew pr-pull
+env:
+  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW }}
 on:
   pull_request_target:
     types:
