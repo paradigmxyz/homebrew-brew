@@ -15,7 +15,9 @@ class Mesc < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--path", "rust/crates/mesc_cli", "--release", *std_cargo_args
+    cd "rust/crates/mesc_cli" do
+      system "cargo", "install", *std_cargo_args
+    end
   end
 
   test do
