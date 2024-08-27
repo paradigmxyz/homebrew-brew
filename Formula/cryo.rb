@@ -12,6 +12,12 @@ class Cryo < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/cryo-0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "6d4e71d850a45df1bc0ac7c437740106e0aa51f5e8d2fa13ce7ca2e8ad10d95e"
+    sha256 cellar: :any_skip_relocation, ventura:      "9ff80aad437bd2000a3284a3a3b2e95dab559af1cc8d82863dc9e495c73ce0eb"
+  end
+
   depends_on "rust" => :build
 
   def install
