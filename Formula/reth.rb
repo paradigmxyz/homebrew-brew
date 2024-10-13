@@ -2,8 +2,8 @@ class Reth < Formula
   desc "Fast implementation of the Ethereum protocol in Rust"
   homepage "https://github.com/paradigmxyz/reth"
   url "https://github.com/paradigmxyz/reth.git",
-    tag:      "v1.0.8",
-    revision: "d72e438c06e040e213b5decf5f29543c86cbad0f"
+    tag:      "v1.1.0",
+    revision: "1ba631ba9581973e7c6cadeea92cfe1802aceb4a"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/paradigmxyz/reth.git", branch: "main"
 
