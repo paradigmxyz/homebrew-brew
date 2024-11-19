@@ -42,5 +42,5 @@ jobs:
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: bottles
+          name: bottles-${{ strategy.job-index }}
           path: "*.bottle.*"
