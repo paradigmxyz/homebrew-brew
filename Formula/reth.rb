@@ -3,7 +3,7 @@ class Reth < Formula
   homepage "https://github.com/paradigmxyz/reth"
   url "https://github.com/paradigmxyz/reth.git",
     tag:      "v1.2.0",
-    revision: "1e0b0d897b372226b3f0ebf911b5176132c322d7"
+    revision: "1e965caf5fa176f244a31c0d2662ba1b590938db"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/paradigmxyz/reth.git", branch: "main"
 
