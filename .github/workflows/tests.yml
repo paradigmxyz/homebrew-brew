@@ -8,10 +8,7 @@ on:
   pull_request:
 jobs:
   test-bot:
-    strategy:
-      matrix:
-        os: [macos-13, macos-14]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-14
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -29,6 +26,12 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
+      - name: Clean Homebrew core tap
+        run: |
+          brew update-reset
+          git -C "$(brew --repo homebrew/core)" reset --hard HEAD
+          git -C "$(brew --repo homebrew/core)" clean -d -f
+
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
@@ -42,5 +45,5 @@ jobs:
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: bottles-${{ strategy.job-index }}
+          name: bottles
           path: "*.bottle.*"
