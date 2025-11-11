@@ -26,7 +26,11 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
-      - run: brew update-reset
+      - name: Clean Homebrew core tap
+        run: |
+          brew update-reset
+          git -C "$(brew --repo homebrew/core)" reset --hard HEAD
+          git -C "$(brew --repo homebrew/core)" clean -d -f
 
       - run: brew test-bot --only-cleanup-before
 
