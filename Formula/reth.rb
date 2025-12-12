@@ -13,8 +13,8 @@ class Reth < Formula
   end
 
   bottle do
-    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-1.9.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "a23436ea02577baecc1011af35a9e2d0b582d0fb8d673777421fd55d2dc770ac"
+    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-1.9.3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "d5fc8dd9b52324f19bc30ce838c19d4c27b86f53943c4950a33ad5ac46e81473"
   end
 
   depends_on "pkg-config" => :build
