@@ -2,8 +2,8 @@ class Reth < Formula
   desc "Fast implementation of the Ethereum protocol in Rust"
   homepage "https://github.com/paradigmxyz/reth"
   url "https://github.com/paradigmxyz/reth.git",
-    tag:      "v1.10.1",
-    revision: "c9dad4765df6c96a427d513227e09767e8e56f14"
+    tag:      "v1.10.2",
+    revision: "8e3b5e6a99439561b73c5dd31bd3eced2e994d60"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/paradigmxyz/reth.git", branch: "main"
 
@@ -13,8 +13,7 @@ class Reth < Formula
   end
 
   bottle do
-    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-1.10.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2f249972e6ce8fa730ce2afd786e008406425e5eae54a775a10a2ad7c9ff2e1f"
+    root_url "https://github.com/paradigmxyz/homebrew-brew/releases/download/reth-1.10.2"
   end
 
   depends_on "pkg-config" => :build
